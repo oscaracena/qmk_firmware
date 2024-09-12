@@ -1,0 +1,33 @@
+{
+    "manufacturer": "Oscar Acena",
+    "keyboard_name": "keepan",
+    "maintainer": "oscaracena",
+    "bootloader": "rp2040",
+    "diode_direction": "COL2ROW",
+    "features": {
+        "bootmagic": true,
+        "command": false,
+        "console": true,
+        "extrakey": true,
+        "mousekey": false,
+        "nkro": true
+    },
+    "matrix_pins": {
+        "cols": ["GP4"],
+        "rows": ["GP5"]
+    },
+    "processor": "RP2040",
+    "url": "",
+    "usb": {
+        "device_version": "0.0.1",
+        "pid": "0xCAFE",
+        "vid": "0xFEED"
+    },
+    "layouts": {
+        "LAYOUT": {
+            "layout": [
+                {"matrix": [0, 0], "x": 0, "y": 0}
+            ]
+        }
+    }
+}

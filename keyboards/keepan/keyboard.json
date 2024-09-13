@@ -7,14 +7,18 @@
     "features": {
         "bootmagic": true,
         "command": false,
-        "console": true,
+        "console": false,
         "extrakey": true,
         "mousekey": false,
-        "nkro": true
+        "nkro": true,
+
+        "rgblight": false,
+        "rgb_matrix": true,
+        "encoder": true
     },
     "matrix_pins": {
-        "cols": ["GP4"],
-        "rows": ["GP5"]
+        "rows": ["GP4"],
+        "cols": ["GP5", "GP6"]
     },
     "processor": "RP2040",
     "url": "",
@@ -26,8 +30,43 @@
     "layouts": {
         "LAYOUT": {
             "layout": [
-                {"matrix": [0, 0], "x": 0, "y": 0}
+                {"matrix": [0, 0], "x": 0, "y": 0},
+                {"matrix": [0, 1], "x": 0, "y": 1}
             ]
         }
+    },
+
+    "rgb_matrix": {
+        "driver": "ws2812",
+        "max_brightness": 10,
+        "animations": {
+            "solid_reactive_simple": true,
+            "static_light": false
+        },
+        "default": {
+            "animation": "solid_reactive_simple",
+            "on": true,
+            "hue": 65
+        },
+        "layout": [
+            {"matrix": [0, 0], "x": 0, "y": 0, "flags": 4},
+            {"matrix": [0, 1], "x": 0, "y": 1, "flags": 4}
+        ]
+    },
+
+    "dip_switch": {
+        "enabled": true,
+        "pins": ["GP28", "GP8"]
+    },
+
+    "encoder": {
+        "rotary": [
+            {"pin_a": "GP14", "pin_b": "GP15", "resolution": 2}
+        ]
+    },
+
+    "ws2812": {
+        "driver": "vendor",
+        "pin": "GP29"
     }
 }

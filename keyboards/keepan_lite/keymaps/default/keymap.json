@@ -1,0 +1,12 @@
+{
+    "keyboard": "keepan_lite",
+    "keymap": "default",
+    "layout": "LAYOUT",
+    "layers": [
+        [
+            "KC_A", "KC_B", "KC_C",
+            "KC_D", "KC_E", "KC_F",
+            "KC_0", "KC_1", "KC_ENTER"
+        ]
+    ]
+}
